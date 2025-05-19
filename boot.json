@@ -1,0 +1,54 @@
+{
+  "name": "TianTP",
+  "version": "1.0.0",
+  "styleFileList": [],
+  "scriptFileList": [],
+  "tweeFileList": ["game/dolTeleport.twee"],
+  "imgFileList": [],
+  "additionFile": ["readme.txt"],
+  "addonPlugin": [
+    {
+      "modName": "ReplacePatcher",
+      "addonName": "ReplacePatcherAddon",
+      "modVersion": "1.0.0",
+      "params": {
+        "twee": [
+          {
+            "TODO": "caption.twee",
+            "passageName": "StoryCaption",
+            "from": "<!-- Event debug button - Shows an overlay stored in debug-events.twee. -->",
+            "to": "<<button TELEPORT>>\n\t<<overlayReplace \"tianTeleport\">>\n<</button>>\n\n<!-- Event debug button - Shows an overlay stored in debug-events.twee. -->"
+          },
+          {
+            "TODO": "overlay-replace.twee",
+            "passageName": "overlayReplace",
+            "from": "<<case \"characteristics\">>",
+            "to": "<<case \"tianTeleport\">>\n\t<<replace #customOverlayTitle>><<titleTianTeleport>><</replace>>\n\t<<replace #customOverlayContent>><<tianTeleport>><</replace>>\n<<case \"characteristics\">>"
+          },
+          {
+            "TODO": "overlay-replace.twee",
+            "passageName": "overlayReplace",
+            "from": "<<widget \"titleCharacteristics\">>",
+            "to": "<<widget \"titleTianTeleport\">>\n\t<<setupTabs>>\n\t<div id=\"overlayTabs\" class=\"tab\">\n\t\t<<closeButtonMobile>>\n\t\t<<button \"Teleport\">>\n\t\t\t<<toggleTab>>\n\t\t\t<<replace #customOverlayContent>><<tianTeleport>><</replace>>\n\t\t<</button>>\n\t\t<<button \"Information\">>\n\t\t\t<<toggleTab>>\n\t\t\t<<replace #customOverlayContent>><<tianTeleportInfo>><</replace>>\n\t\t<</button>>\n\t</div>\n\t<<closeButton>>\n<</widget>>\n\n<<widget \"titleCharacteristics\">>"
+          }
+        ]
+      }
+    },
+    {
+      "modName": "TweeReplacer",
+      "addonName": "TweeReplacerAddon",
+      "modVersion": "^1.2.0",
+      "params": []
+    }
+  ],
+  "dependenceInfo": [
+    {
+      "modName": "TweeReplacer",
+      "version": "^1.2.0"
+    },
+    {
+      "modName": "ReplacePatcher",
+      "version": "^1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+:: Tian [widget]
+
+<<widget "tianTeleport">>
+    <div class="settingsGrid">
+		<div class="settingsHeader options">Teleportation</div>
+		<<if ["Clothing Shop", "Forest Shop", "School Library Shop", "Adult Shop Store"].includes($passage)>>
+			<div class="settingsToggleItemWide">
+				<span class="red">Teleporting from a clothing store can break your wardrobe.</span> Please leave the shop before teleporting.
+			</div>
+		<<elseif ["Livestock Field"].includes($passage)>>
+			<div class="settingsToggleItemWide">
+				<span class="red">Teleporting from bad end can lead to various problems.</span> Please escape before teleporting.
+			</div>
+		<<elseif setup.majorAreas.includes($passage) and $event is undefined>>
+			<div class="settingsToggleItemWide">
+			<b>Teleporting from anywhere but the overworld can cause bugs.</b>
+			</div>
+
+            <div class="settingsToggleItemWide">
+                <span class="gold">Special Locations <span class="red">(Use at your own risk)</span></span>
+                <br>
+				<<bedicon >><<link [[Bedroom]]>><</link>>
+                <br>
+				<<lockericon >><<link [[Hallways]]>><</link>>
+				<br>
+				<<parkicon >><<link [[Park]]>><</link>>
+				<br>
+				<<birdicon >><<link [[Bird Tower]]>><</link>>
+				<br>
+				<<edenicon >><<link [[Eden Cabin]]>><</link>>
+				<br>
+				<<wolfcaveicon >><<link [[Wolf Cave]]>><</link>>
+                <br>
+            </div>
+
+			<div class="settingsToggleItemWide">
+				<span class="gold">Town Locations</span>
+				<br>
+				<<homeicon>><<link [[Orphanage]]>><</link>>
+				<br>
+				<<shopicon>><<link [[Shopping Centre]]>><</link>>
+				<br>
+				<<if $dorenintro gte 1 and $exposed lte 0>>
+					<<dooricon "doren">><<link [[Doren's Flat|Doren Entrance]]>><</link>>
+					<br>
+				<</if>>
+				<<dancestudioicon>><<link [[Dance Studio]]>><</link>>
+				<br>
+				<<policeicon>><<link [[Police Station]]>><</link>>
+				<br>
+				<<policeicon>><<link [[Police Back Office]]>><</link>>
+				<br>
+				<<spaicon>><<link [[Spa]]>><</link>>
+				<br>
+				<<wolficon>><<link [[Temple]]>><</link>>
+				<br>
+				<<kitchenicon "soup">><<link [[Soup Kitchen]]>><</link>>
+				<br>
+				<<stripclubicon>><<link [[Strip Club]]>><</link>>
+				<br>
+				<<hospitalicon>><<link [[Hospital|Hospital front]]>><</link>>
+				<br>
+				<<if $trash_unlocked is 1>>
+					<<landfillicon>><<link [[Landfill|Trash Gate Enter]]>><</link>>
+					<br>
+				<</if>>
+				<<if $compoundcard or $farm_stage gte 9>>
+					<<landfillicon>><<link [[Elk Compound]]>><</link>>
+					<br>
+				<</if>>
+				<<museumicon>><<link [[Museum]]>><</link>>
+				<br>
+				<<oxfordicon>><<link [[School Front Courtyard]]>><</link>>
+				<br>
+				<<brothelicon>><<link [[Brothel]]>><</link>>
+				<br>
+				<<pubicon>><<link [[Pub]]>><</link>>
+				<br>
+				<<busstationicon>><<link [[Bus Station]]>><</link>>
+				<br>
+				<<docksicon>><<link [[Docks]]>><</link>>
+				<br>
+				<<beachicon>><<link [[Beach]]>><</link>>
+				<br>
+				<<cafeicon>><<link [[Ocean Breeze]]>><</link>>
+			</div>
+
+            <div class="settingsToggleItemWide">
+                <span class="gold">Town Outskirts</span>
+				<br>
+				<<foresticon>><<link [[Forest]]>><</link>>
+				<br>
+				<<roadicon>><<link [[Farm Road 1]]>><</link>>
+				<br>
+				<<farmicon "barn">><<link [[Farmlands|Farmland]]>><</link>>
+                <br>
+            </div>
+
+			<div class="settingsToggleItemWide">
+				<span class="gold">Town Streets</span>
+				<br>
+				<<domusicon>><<link [[Domus Street]]>><</link>>
+				<br>
+				<<danubeicon>><<link [[Danube Street]]>><</link>>
+				<br>
+				<<barbicon>><<link [[Barb Street]]>><</link>>
+				<br>
+				<<wolficon>><<link [[Wolf Street]]>><</link>>
+				<br>
+				<<connudatusicon>><<link [[Connudatus Street]]>><</link>>
+				<br>
+				<<nightingaleicon>><<link [[Nightingale Street]]>><</link>>
+				<br>
+				<<highicon>><<link [[High Street]]>><</link>>
+				<br>
+				<<elkicon>><<link [[Elk Street]]>><</link>>
+				<br>
+				<<oxfordicon>><<link [[Oxford Street]]>><</link>>
+				<br>
+				<<harvesticon>><<link [[Harvest Street]]>><</link>>
+				<br>
+				<<mericon>><<link [[Mer Street]]>><</link>>
+				<br>
+				<<starfishicon>><<link [[Starfish Street]]>><</link>>
+				<br>
+				<<clifficon>><<link [[Cliff Street]]>><</link>>
+				<br>
+				<<alleyicon>><<link [[Commercial alleyways]]>><</link>>
+				<br>
+				<<alleyicon>><<link [[Industrial alleyways]]>><</link>>
+				<br>
+				<<alleyicon>><<link [[Residential alleyways]]>><</link>>
+			</div>
+
+            <div class="settingsToggleItemWide">
+				<span class="gold">Underground</span>
+				<br>
+				<<sewericon>><<link [[Industrial Drain]]>><</link>>
+				<br>
+				<<sewericon>><<link [[Commercial Drain]]>><</link>>
+				<br>
+				<<sewericon>><<link [[Residential Drain]]>><</link>>
+				<br>
+				<<sewericon>><<link [[Drain ocean exit|Drain Exit]]>><</link>>
+				<br>
+				<<sewericon>><<link [[Sewers Residential]]>><</link>>
+				<br>
+				<<sewericon>><<link [[Sewers Commercial]]>><</link>>
+				<br>
+				<<sewericon>><<link [[Sewers Industrial]]>><</link>>
+            </div>
+		<<else>>
+			<div class="settingsToggleItemWide">
+				<span class="red">You are in an area where teleporting can break your save, or an event is in progress.</span> Return to the overworld before teleporting.
+			</div>
+		<</if>>
+	</div>
+
+    <div class="settingsGrid">
+		<input type="button" class="toTop options" value="Top of Page" onclick="$('#customOverlayContent').scrollTop(0)"/>
+	</div>
+<</widget>>
+
+<<widget "tianTeleportInfo">>
+	<div class="p-2 text-align-center">
+
+		<h1 class="gold">Mod Name</h1>
+		<div class="m-2">
+			<span class="green">DOL Teleporter</span>
+		</div>
+
+		<h2 class="gold">Programmer</h2>
+		<div class="m-2">
+			<span class="green">Tian</span>
+            <br>
+            <span class="green">ImNiYeYe</span>
+		</div>
+
+        <h2 class="gold">GitHub</h2>
+		<div class="m-2">
+            [[https://github.com/ImNiYeYe/DOL-Teleporter]]
+		</div>
+	</div>
+<</widget>>
