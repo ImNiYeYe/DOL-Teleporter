@@ -23,14 +23,36 @@
                 <br>
 				<<lockericon >><<link [[Hallways]]>><</link>>
 				<br>
-				<<parkicon >><<link [[Park]]>><</link>>
+				<<factoryicon >><<link [[Farmers Centre]]>><</link>>
+                <br>
+				<!-- FARM -->
+				<<if $farm_stage is undefined and $exposed lte 0>>
+					<<farmicon "barn">><<link [[Ask about farm work|Farm Intro]]>><<set $farm_stage to 1>><</link>>
+					<br>
+				<<elseif $farm_stage is 1 and $exposed lte 0>>
+					<<farmicon "barn">><<link [[Ask about farm work again|Farm Intro Accept 2]]>><<set $farm_stage to 2>><</link>>
+					<br>
+				<<elseif ($farm_stage is undefined or $farm_stage is 1) and $exposed gte 1>>
+					<<farmicon "barn">><span class="blue">You're too exposed to ask about farm work!</span>
+					<br>
+				<</if>>
+				<<if $farm_stage gte 2>>
+					<<farmicon "barn">><<link [[Farm|Farm Work]]>>
+						<<if $farm_stage gte 7 and ((hasSexStat("exhibitionism", 5) and $exposed gte 2) or (hasSexStat("exhibitionism", 4) and $exposed gte 1))>>
+							<<set $farm_naked to 1>>
+						<</if>>
+					<</link>>
+				<</if>>
+				<!-- END OF FARM -->
 				<br>
 				<<birdicon >><<link [[Bird Tower]]>><</link>>
 				<br>
 				<<edenicon >><<link [[Eden Cabin]]>><</link>>
 				<br>
 				<<wolfcaveicon >><<link [[Wolf Cave]]>><</link>>
-                <br>
+				
+				<br>
+				<<parkicon >><<link [[Park]]>><</link>>
             </div>
 
 			<div class="settingsToggleItemWide">
