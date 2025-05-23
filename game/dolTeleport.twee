@@ -1,5 +1,21 @@
 :: Tian [widget]
 
+<<widget "titleTianTeleport">>
+	<<setupTabs>>
+	<div id="overlayTabs" class="tab">
+		<<closeButtonMobile>>
+		<<button "Teleport">>
+			<<toggleTab>>
+			<<replace #customOverlayContent>><<tianTeleport>><</replace>>
+		<</button>>
+		<<button "Information">>
+			<<toggleTab>>
+			<<replace #customOverlayContent>><<tianTeleportInfo>><</replace>>
+		<</button>>
+	</div>
+	<<closeButton>>
+<</widget>>
+
 <<widget "tianTeleport">>
     <div class="settingsGrid">
 		<div class="settingsHeader options">Teleportation</div>
