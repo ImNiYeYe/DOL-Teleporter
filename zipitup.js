@@ -33,11 +33,17 @@ for (const item of items) {
 //CN - 文件压缩逻辑
 /////////////////////////////////////////////
 
-const output = fs.createWriteStream("Dol-Teleporter.zip");
+console.log("[Verifying] Looking Up Mod Version...");
+const bootData = JSON.parse(fs.readFileSync("boot.json", "utf-8"));
+const modVersion = bootData.version;
+console.log(`[Info] Mod Version: ${modVersion}`);
+
+const outputName = `Dol-Teleporter-v${modVersion}.zip`;
+const output = fs.createWriteStream(outputName);
 const archive = archiver("zip", { zlib: { level: 9 } });
 
 output.on("close", () => {
-  console.log(`[Completed] Created Dol-Teleporter.zip (${archive.pointer()} bytes)`);
+  console.log(`[Completed] Created ${outputName} (${archive.pointer()} bytes)`);
 });
 
 archive.on("error", (err) => {
