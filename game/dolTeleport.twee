@@ -35,11 +35,11 @@
             <div class="settingsToggleItemWide">
                 <span class="gold">Special Locations <span class="red">(Use at your own risk)</span></span>
                 <br>
-				<<bedicon >><<link [[Bedroom]]>><</link>>
+				<<bedicon >><<link [[Bedroom|Bedroom]]>><</link>>
                 <br>
-				<<lockericon >><<link [[Hallways]]>><</link>>
+				<<lockericon >><<link [[Hallways|Hallways]]>><</link>>
 				<br>
-				<<factoryicon >><<link [[Farmers Centre]]>><</link>>
+				<<factoryicon >><<link [[Farmers Centre|Farmers Centre]]>><</link>>
                 <br>
 				<!-- FARM -->
 				<<if $farm_stage is undefined and $exposed lte 0>>
@@ -58,40 +58,40 @@
 				<</if>>
 				<!-- END OF FARM -->
 				<br>
-				<<birdicon >><<link [[Bird Tower]]>><</link>>
+				<<birdicon >><<link [[Bird Tower|Bird Tower]]>><</link>>
 				<br>
-				<<edenicon >><<link [[Eden Cabin]]>><</link>>
+				<<edenicon >><<link [[Eden Cabin|Eden Cabin]]>><</link>>
 				<br>
-				<<wolfcaveicon >><<link [[Wolf Cave]]>><</link>>
+				<<wolfcaveicon >><<link [[Wolf Cave|Wolf Cave]]>><</link>>
 				
 				<br>
-				<<parkicon >><<link [[Park]]>><</link>>
+				<<parkicon >><<link [[Park|Park]]>><</link>>
             </div>
 
 			<div class="settingsToggleItemWide">
 				<span class="gold">Town Locations</span>
 				<br>
-				<<homeicon>><<link [[Orphanage]]>><</link>>
+				<<homeicon>><<link [[Orphanage|Orphanage]]>><</link>>
 				<br>
-				<<shopicon>><<link [[Shopping Centre]]>><</link>>
+				<<shopicon>><<link [[Shopping Centre|Shopping Centre]]>><</link>>
 				<br>
 				<<if $dorenintro gte 1 and $exposed lte 0>>
 					<<dooricon "doren">><<link [[Doren's Flat|Doren Entrance]]>><</link>>
 					<br>
 				<</if>>
-				<<dancestudioicon>><<link [[Dance Studio]]>><</link>>
+				<<dancestudioicon>><<link [[Dance Studio|Dance Studio]]>><</link>>
 				<br>
-				<<policeicon>><<link [[Police Station]]>><</link>>
+				<<policeicon>><<link [[Police Station|Police Station]]>><</link>>
 				<br>
-				<<policeicon>><<link [[Police Back Office]]>><</link>>
+				<<policeicon>><<link [[Police Back Office|Police Back Office]]>><</link>>
 				<br>
-				<<spaicon>><<link [[Spa]]>><</link>>
+				<<spaicon>><<link [[Spa|Spa]]>><</link>>
 				<br>
-				<<wolficon>><<link [[Temple]]>><</link>>
+				<<wolficon>><<link [[Temple|Temple]]>><</link>>
 				<br>
-				<<kitchenicon "soup">><<link [[Soup Kitchen]]>><</link>>
+				<<kitchenicon "soup">><<link [[Soup Kitchen|Soup Kitchen]]>><</link>>
 				<br>
-				<<stripclubicon>><<link [[Strip Club]]>><</link>>
+				<<stripclubicon>><<link [[Strip Club|Strip Club]]>><</link>>
 				<br>
 				<<hospitalicon>><<link [[Hospital|Hospital front]]>><</link>>
 				<br>
@@ -100,32 +100,32 @@
 					<br>
 				<</if>>
 				<<if $compoundcard or $farm_stage gte 9>>
-					<<landfillicon>><<link [[Elk Compound]]>><</link>>
+					<<landfillicon>><<link [[Elk Compound|Elk Compound]]>><</link>>
 					<br>
 				<</if>>
-				<<museumicon>><<link [[Museum]]>><</link>>
+				<<museumicon>><<link [[Museum|Museum]]>><</link>>
 				<br>
-				<<oxfordicon>><<link [[School Front Courtyard]]>><</link>>
+				<<oxfordicon>><<link [[School Front Courtyard|School Front Courtyard]]>><</link>>
 				<br>
-				<<brothelicon>><<link [[Brothel]]>><</link>>
+				<<brothelicon>><<link [[Brothel|Brothel]]>><</link>>
 				<br>
-				<<pubicon>><<link [[Pub]]>><</link>>
+				<<pubicon>><<link [[Pub|Pub]]>><</link>>
 				<br>
-				<<busstationicon>><<link [[Bus Station]]>><</link>>
+				<<busstationicon>><<link [[Bus Station|Bus Station]]>><</link>>
 				<br>
-				<<docksicon>><<link [[Docks]]>><</link>>
+				<<docksicon>><<link [[Docks|Docks]]>><</link>>
 				<br>
-				<<beachicon>><<link [[Beach]]>><</link>>
+				<<beachicon>><<link [[Beach|Beach]]>><</link>>
 				<br>
-				<<cafeicon>><<link [[Ocean Breeze]]>><</link>>
+				<<cafeicon>><<link [[Ocean Breeze|Ocean Breeze]]>><</link>>
 			</div>
 
             <div class="settingsToggleItemWide">
                 <span class="gold">Town Outskirts</span>
 				<br>
-				<<foresticon>><<link [[Forest]]>><</link>>
+				<<foresticon>><<link [[Forest|Forest]]>><</link>>
 				<br>
-				<<roadicon>><<link [[Farm Road 1]]>><</link>>
+				<<roadicon>><<link [[Farm Road 1|Farm Road 1]]>><</link>>
 				<br>
 				<<farmicon "barn">><<link [[Farmlands|Farmland]]>><</link>>
                 <br>
@@ -134,55 +134,55 @@
 			<div class="settingsToggleItemWide">
 				<span class="gold">Town Streets</span>
 				<br>
-				<<domusicon>><<link [[Domus Street]]>><</link>>
+				<<domusicon>><<link [[Domus Street|Domus Street]]>><</link>>
 				<br>
-				<<danubeicon>><<link [[Danube Street]]>><</link>>
+				<<danubeicon>><<link [[Danube Street|Danube Street]]>><</link>>
 				<br>
-				<<barbicon>><<link [[Barb Street]]>><</link>>
+				<<barbicon>><<link [[Barb Street|Barb Street]]>><</link>>
 				<br>
-				<<wolficon>><<link [[Wolf Street]]>><</link>>
+				<<wolficon>><<link [[Wolf Street|Wolf Street]]>><</link>>
 				<br>
-				<<connudatusicon>><<link [[Connudatus Street]]>><</link>>
+				<<connudatusicon>><<link [[Connudatus Street|Connudatus Street]]>><</link>>
 				<br>
-				<<nightingaleicon>><<link [[Nightingale Street]]>><</link>>
+				<<nightingaleicon>><<link [[Nightingale Street|Nightingale Street]]>><</link>>
 				<br>
-				<<highicon>><<link [[High Street]]>><</link>>
+				<<highicon>><<link [[High Street|High Street]]>><</link>>
 				<br>
-				<<elkicon>><<link [[Elk Street]]>><</link>>
+				<<elkicon>><<link [[Elk Street|Elk Street]]>><</link>>
 				<br>
-				<<oxfordicon>><<link [[Oxford Street]]>><</link>>
+				<<oxfordicon>><<link [[Oxford Street|Oxford Street]]>><</link>>
 				<br>
-				<<harvesticon>><<link [[Harvest Street]]>><</link>>
+				<<harvesticon>><<link [[Harvest Street|Harvest Street]]>><</link>>
 				<br>
-				<<mericon>><<link [[Mer Street]]>><</link>>
+				<<mericon>><<link [[Mer Street|Mer Street]]>><</link>>
 				<br>
-				<<starfishicon>><<link [[Starfish Street]]>><</link>>
+				<<starfishicon>><<link [[Starfish Street|Starfish Street]]>><</link>>
 				<br>
-				<<clifficon>><<link [[Cliff Street]]>><</link>>
+				<<clifficon>><<link [[Cliff Street|Cliff Street]]>><</link>>
 				<br>
-				<<alleyicon>><<link [[Commercial alleyways]]>><</link>>
+				<<alleyicon>><<link [[Commercial alleyways|Commercial alleyways]]>><</link>>
 				<br>
-				<<alleyicon>><<link [[Industrial alleyways]]>><</link>>
+				<<alleyicon>><<link [[Industrial alleyways|Industrial alleyways]]>><</link>>
 				<br>
-				<<alleyicon>><<link [[Residential alleyways]]>><</link>>
+				<<alleyicon>><<link [[Residential alleyways|Residential alleyways]]>><</link>>
 			</div>
 
             <div class="settingsToggleItemWide">
 				<span class="gold">Underground</span>
 				<br>
-				<<sewericon>><<link [[Industrial Drain]]>><</link>>
+				<<sewericon>><<link [[Industrial Drain|Industrial Drain]]>><</link>>
 				<br>
-				<<sewericon>><<link [[Commercial Drain]]>><</link>>
+				<<sewericon>><<link [[Commercial Drain|Commercial Drain]]>><</link>>
 				<br>
-				<<sewericon>><<link [[Residential Drain]]>><</link>>
+				<<sewericon>><<link [[Residential Drain|Residential Drain]]>><</link>>
 				<br>
 				<<sewericon>><<link [[Drain ocean exit|Drain Exit]]>><</link>>
 				<br>
-				<<sewericon>><<link [[Sewers Residential]]>><</link>>
+				<<sewericon>><<link [[Sewers Residential|Sewers Residential]]>><</link>>
 				<br>
-				<<sewericon>><<link [[Sewers Commercial]]>><</link>>
+				<<sewericon>><<link [[Sewers Commercial|Sewers Commercial]]>><</link>>
 				<br>
-				<<sewericon>><<link [[Sewers Industrial]]>><</link>>
+				<<sewericon>><<link [[Sewers Industrial|Sewers Industrial]]>><</link>>
             </div>
 		<<else>>
 			<div class="settingsToggleItemWide">
