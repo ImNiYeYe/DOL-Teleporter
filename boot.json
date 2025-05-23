@@ -24,7 +24,7 @@
           "findString": "<<case \"characteristics\">>",
           "replace": "<<case \"tianTeleport\">>\n\t<<replace #customOverlayTitle>><<titleTianTeleport>><</replace>>\n\t<<replace #customOverlayContent>><<tianTeleport>><</replace>>\n<<case \"characteristics\">>",
           "debug": true,
-          "_comment": "Changes overlayReplace.twee to include a case for the teleporter overlay"
+          "_comment": "Changes overlay-replace.twee to include a case for the teleporter overlay"
         }
       ]
     }
