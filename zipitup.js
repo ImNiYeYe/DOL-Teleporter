@@ -38,7 +38,7 @@ const bootData = JSON.parse(fs.readFileSync("boot.json", "utf-8"));
 const modVersion = bootData.version;
 console.log(`[Info] Mod Version: ${modVersion}`);
 
-const outputName = `Dol-Teleporter-v${modVersion}.zip`;
+const outputName = `Dol-Teleporter-v${modVersion}.mod.zip`;
 const output = fs.createWriteStream(outputName);
 const archive = archiver("zip", { zlib: { level: 9 } });
 
